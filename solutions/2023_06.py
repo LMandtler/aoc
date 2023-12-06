@@ -13,7 +13,6 @@ class race():
         if change == -1:
             change = math.ceil(button_push / 2)
         if button_push >= self.min_button_push:
-            print('end', button_push)
             button_push = self.length - self.min_button_push
             distance = (self.length - button_push) * button_push
             if distance > self.max_distance:
