@@ -29,9 +29,12 @@ class solver():
         
         # part 1
         digits = re.sub('\D', '', line)
-        first = int(digits[0]) * 10
-        last = int(digits[-1])
-        part1 = first + last
+        if len(digits) > 0:
+            first = int(digits[0]) * 10
+            last = int(digits[-1])
+            part1 = first + last
+        else:
+            part1 = 0
         # part 2
         digits = re.sub('\D', '', line2)
         first = int(digits[0]) * 10
