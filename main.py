@@ -4,7 +4,7 @@ import importlib
 import shutil
 
 year = 2023
-day = 8
+day = 9
 
 # check if example file and solution file exist, else create them
 if not os.path.exists(f'data/{year}_{str(day).zfill(2)}_example.txt'):
