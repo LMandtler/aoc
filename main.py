@@ -4,7 +4,7 @@ import importlib
 import shutil
 
 year = 2023
-day = 9
+day = 18
 
 # check if example file and solution file exist, else create them
 if not os.path.exists(f'data/{year}_{str(day).zfill(2)}_example.txt'):
@@ -25,8 +25,8 @@ if not os.path.exists(f'solutions/{year}_{str(day).zfill(2)}.py'):
 
 solution = importlib.import_module(f'solutions.{year}_{str(day).zfill(2)}')
 get_data(day=day, year=year)
-
-for inputfile in [f'data/{year}_{str(day).zfill(2)}_example.txt', os.path.expanduser(f'data/github.LMandtler.1904796/{year}_{str(day).zfill(2)}_input.txt')]:
+inputfiles = [f'data/{year}_{str(day).zfill(2)}_example.txt', os.path.expanduser(f'data/github.LMandtler.1904796/{year}_{str(day).zfill(2)}_input.txt')]
+for inputfile in inputfiles:
     with open(inputfile) as f:
         lines = f.readlines()
         solver = solution.solver(lines)
